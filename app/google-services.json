@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "251713582457",
+    "firebase_url": "https://vbook-c6c84-default-rtdb.firebaseio.com",
+    "project_id": "vbook-c6c84",
+    "storage_bucket": "vbook-c6c84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251713582457:android:65f72894204d13dad1aba8",
+        "android_client_info": {
+          "package_name": "com.example.vbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251713582457-phbp3n19rigbj24k7n8d3kkccfeoi9q5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vbook",
+            "certificate_hash": "830376bd307e631711113f88e8c24ef67cb02815"
+          }
+        },
+        {
+          "client_id": "251713582457-ffc8tbcn1323d21o3ejmj1ma3v8f7i7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnqotlpP5tQfEcwUR07Q1E2pkYZGcLClc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251713582457-ffc8tbcn1323d21o3ejmj1ma3v8f7i7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
