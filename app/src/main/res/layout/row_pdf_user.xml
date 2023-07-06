@@ -45,6 +45,7 @@
             style="@style/TextAppearance.MaterialComponents.Body2"
             android:text="Mô Tả"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/times"
             android:layout_toEndOf="@+id/pdfRl"
             android:layout_below="@+id/titleTv"
             android:maxLines="4"

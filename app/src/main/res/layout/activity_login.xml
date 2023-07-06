@@ -27,7 +27,7 @@
             android:layout_marginTop="1dp"
             android:text="Đăng Nhập"
             android:textColor="@color/white"
-            android:fontFamily="sans-serif-condensed"
+            android:fontFamily="@font/times"
             android:textSize="20dp"/>
 
 
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/forgotTv"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/custom_bt"
+                android:background="@drawable/custom_btn_ripple"
                 android:text="login"
                 android:textColor="@color/white"
                 android:fontFamily="sans-serif-condensed"/>

@@ -127,7 +127,7 @@
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginTop="18dp"
-                android:background="@drawable/custom_bt"
+                android:background="@drawable/custom_btn_ripple"
                 android:text="Cập Nhật"
                 android:layout_below="@id/categoryTv"
                 android:textColor="@color/white"

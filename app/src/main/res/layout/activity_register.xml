@@ -155,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cPasswordTil"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/custom_bt"
+                android:background="@drawable/custom_btn_ripple"
                 android:text="Register"
                 android:textColor="@color/white"
                 android:fontFamily="sans-serif-condensed"/>

@@ -20,7 +20,7 @@
         android:id="@+id/titleTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="@font/times"
         android:padding="5dp"
         android:text="Thêm bình luận"
         android:textAlignment="center"
@@ -55,6 +55,8 @@
         android:layout_below="@id/commemtTil"
         android:layout_marginTop="20dp"
         android:text="Gửi"
+        android:fontFamily="@font/times"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:background="@drawable/custom_btn_ripple"/>
 

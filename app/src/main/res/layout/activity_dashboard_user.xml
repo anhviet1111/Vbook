@@ -31,6 +31,7 @@
             android:layout_centerHorizontal="true"
             android:layout_height="wrap_content"
             android:text="Dashboard user"
+            android:fontFamily="@font/times"
             android:textStyle="bold"
             android:textColor="@color/white"/>
         <TextView
@@ -50,6 +51,7 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/ic_logoout_white"
             android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:background="@android:color/transparent"
             />

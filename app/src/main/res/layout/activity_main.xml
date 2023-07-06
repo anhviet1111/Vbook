@@ -22,7 +22,7 @@
         android:layout_centerHorizontal="true"
         android:text="Chào Mừng Đến Với VBook"
 
-        android:fontFamily="sans-serif-condensed-light"
+        android:fontFamily="@font/times"
         />
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginBtn"
@@ -30,11 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/skipBtn"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/custom_bt"
+        android:background="@drawable/custom_btn_ripple"
         android:text="Đăng Nhập"
         android:textAllCaps="false"
         android:textSize="20sp"
-        android:fontFamily="sans-serif-condensed-light"
+        android:fontFamily="@font/times"
         />
     <androidx.appcompat.widget.AppCompatButton
 
@@ -46,6 +46,6 @@
         android:text="Khách"
         android:textAllCaps="false"
         android:textSize="20sp"
-        android:fontFamily="sans-serif-condensed-light"/>
+        android:fontFamily="@font/times"/>
 
 </RelativeLayout>

@@ -12,6 +12,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,9 +21,11 @@ import android.widget.Toast;
 
 import com.example.vbook.MyApplication;
 import com.example.vbook.R;
+import com.example.vbook.adapters.AdapterComment;
 import com.example.vbook.adapters.AdapterPdfFavorite;
 import com.example.vbook.databinding.ActivityPdfDetailBinding;
 import com.example.vbook.databinding.DialogCommentAdddBinding;
+import com.example.vbook.models.ModelComment;
 import com.example.vbook.models.ModelPdf;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -50,6 +53,9 @@ public class PdfDetailActivity extends AppCompatActivity {
     private static final String TAG_DOWNLOAD = "DOWNLOAD_TAG";
     private ProgressDialog progressDialog;
 
+    private ArrayList<ModelComment> commentArrayList;
+    private AdapterComment adapterComment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +79,7 @@ public class PdfDetailActivity extends AppCompatActivity {
         }
 
         loadBookDetails();
+        loadComments();
         //increment book view count
         MyApplication.incrementBookViewCount(bookId);
 
@@ -145,6 +152,31 @@ public class PdfDetailActivity extends AppCompatActivity {
 
 
     }
+
+    private void loadComments() {
+        commentArrayList = new ArrayList<>();
+
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Books");
+        ref.child(bookId).child("Comments")
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        commentArrayList.clear();
+                        for (DataSnapshot ds: snapshot.getChildren()){
+                            ModelComment model = ds.getValue(ModelComment.class);
+                            commentArrayList.add(model);
+                        }
+                        adapterComment = new AdapterComment(PdfDetailActivity.this,commentArrayList);
+                        binding.commentsRv.setAdapter(adapterComment);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+    }
+
     private String comment= "";
     private void addCommentDialog() {
 
@@ -236,7 +268,7 @@ public class PdfDetailActivity extends AppCompatActivity {
                         bookTitle = ""+snapshot.child("title").getValue();
                         String description = ""+snapshot.child("description").getValue();
                         String categoryId = ""+snapshot.child("categoryId").getValue();
-                        String viewCount = ""+snapshot.child("viewCount").getValue();
+                        String viewCount = ""+snapshot.child("viewsCount").getValue();
                         String downloadsCount = ""+snapshot.child("downloadsCount").getValue();
                         bookUrl = ""+snapshot.child("url").getValue();
                         String timestamp = ""+snapshot.child("timestamp").getValue();
